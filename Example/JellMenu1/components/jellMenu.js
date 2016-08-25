@@ -4,6 +4,15 @@
  * @flow
  */
 
+ /*
+  *  install react-native-svg
+  *  1.Install library from npm.
+  *    npm install react-native-svg --save
+  *  2 . Link native code
+  *    react-native link react-native-svg
+  *
+  */
+
 import React, { Component, PropTypes } from 'react';
 import {
   StyleSheet,
@@ -24,15 +33,6 @@ import Svg, {
 
 import MenuItem from './menuItem';
 
-/*
- *  install react-native-svg
- *  1.Install library from npm.
- *    npm install react-native-svg --save
- *  2 . Link native code
- *    react-native link react-native-svg
- *
- */
-
 const WINDOW = Dimensions.get('window');
 const WINDOW_HEIGHT = WINDOW.height;
 // width of menu
@@ -47,7 +47,6 @@ export default class JellMenu extends Component {
 
   constructor(props) {
     super(props);
-    this.docked = false;
 
     this.state = {
       pan: new Animated.ValueXY(),
@@ -65,7 +64,6 @@ export default class JellMenu extends Component {
     });
 
     this.state.animator.addListener((p) => {
-      console.log(p);
       this.setState({
         left: p.value,
       });

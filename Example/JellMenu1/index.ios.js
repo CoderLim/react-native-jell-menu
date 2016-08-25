@@ -23,13 +23,13 @@ class JellMenu1 extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>右滑->有菜单</Text>
+        <Text>pan right</Text>
         <JellMenu>
-          <MenuItem onClick={() => {Alert.alert('', '点击了菜单一');}}>菜单一</MenuItem>
-          <MenuItem onClick={() => {Alert.alert('', '点击了菜单二');}}>菜单二</MenuItem>
-          <MenuItem onClick={() => {Alert.alert('', '点击了菜单三');}}>菜单三</MenuItem>
-          <MenuItem onClick={() => {Alert.alert('', '点击了菜单四');}}>菜单四</MenuItem>
-          <MenuItem onClick={() => {Alert.alert('', '点击了菜单五');}}>菜单五</MenuItem>
+          <MenuItem onClick={() => {Alert.alert('', 'menu1 clicked');}}>Menu1</MenuItem>
+          <MenuItem onClick={() => {Alert.alert('', 'menu2 clicked');}}>Menu2</MenuItem>
+          <MenuItem onClick={() => {Alert.alert('', 'menu3 clicked');}}>Menu3</MenuItem>
+          <MenuItem onClick={() => {Alert.alert('', 'menu4 clicked');}}>Menu4</MenuItem>
+          <MenuItem onClick={() => {Alert.alert('', 'menu5 clicked');}}>Menu5</MenuItem>
         </JellMenu>
       </View>
     );
